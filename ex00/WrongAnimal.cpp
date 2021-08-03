@@ -1,4 +1,4 @@
-#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 
 /* ************************************************************************** */
 /*                                OUTTER FONCTIONS                            */
@@ -12,37 +12,56 @@
 /*                           CONSTRUCTOR - DESTRUCTOR                         */
 /* ************************************************************************** */
 
-Dog::Dog(void)
+WrongAnimal::WrongAnimal(void)
 {
-	this->_type = "Dog";
+
 }
 
-Dog::Dog(const Dog &src)
+WrongAnimal::WrongAnimal(const WrongAnimal &src)
 {
 	*this = src;
 }
 
-Dog::~Dog(void) {}
+WrongAnimal::~WrongAnimal(void)
+{
+
+}
 
 /* ************************************************************************** */
 /*                              OVERLOAD FONCTIONS                            */
 /* ************************************************************************** */
 
-Dog	&Dog::operator=(const Dog &right)
+WrongAnimal	&WrongAnimal::operator=(const  WrongAnimal &right)
 {
-	Animal::operator=(right);
+	this->_type = right.getType();
 	return (*this);
+}
+
+std::ostream	&operator<<(std::ostream &os, const  WrongAnimal &i)
+{
+	os << "type: " << i.getType();
+	return (os);
 }
 
 /* ************************************************************************** */
 /*                                 ACCES FONCTIONS                            */
 /* ************************************************************************** */
 
+std::string	WrongAnimal::getType() const
+{
+	return (this->_type);
+}
+
+void	WrongAnimal::setType(const std::string &type)
+{
+	this->_type = type;
+}
+
 /* ************************************************************************** */
 /*                                MEMBER FONCTIONS                            */
 /* ************************************************************************** */
 
-void	Dog::makeSound(void) const
+void	WrongAnimal::makeSound(void) const
 {
-	std::cout << "Woooff" << std::endl;
+	std::cout << "I'm a unknow wrong animal" << std::endl;
 }

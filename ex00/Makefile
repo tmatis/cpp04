@@ -6,7 +6,7 @@
 #    By: tmatis <tmatis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/14 10:00:31 by tmatis            #+#    #+#              #
-#    Updated: 2021/08/02 16:03:12 by tmatis           ###   ########.fr        #
+#    Updated: 2021/08/03 13:34:18 by tmatis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRCS_PATH		= ./
 
 INCLUDE_PATH	= ./
 
-SRCS		= Animal.cpp Dog.cpp Cat.cpp
+SRCS		= Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 MAIN		= main.cpp
 
 ################################################################################

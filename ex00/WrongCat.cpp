@@ -1,4 +1,4 @@
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
 /* ************************************************************************** */
 /*                                OUTTER FONCTIONS                            */
@@ -12,25 +12,28 @@
 /*                           CONSTRUCTOR - DESTRUCTOR                         */
 /* ************************************************************************** */
 
-Dog::Dog(void)
+WrongCat::WrongCat(void)
 {
-	this->_type = "Dog";
+	this->_type = "WrongCat";
 }
 
-Dog::Dog(const Dog &src)
+WrongCat::WrongCat(const WrongCat &src)
 {
 	*this = src;
 }
 
-Dog::~Dog(void) {}
+WrongCat::~WrongCat(void)
+{
+
+}
 
 /* ************************************************************************** */
 /*                              OVERLOAD FONCTIONS                            */
 /* ************************************************************************** */
 
-Dog	&Dog::operator=(const Dog &right)
+WrongCat	&WrongCat::operator=(const WrongCat &right)
 {
-	Animal::operator=(right);
+	WrongAnimal::operator=(right);
 	return (*this);
 }
 
@@ -42,7 +45,7 @@ Dog	&Dog::operator=(const Dog &right)
 /*                                MEMBER FONCTIONS                            */
 /* ************************************************************************** */
 
-void	Dog::makeSound(void) const
+void	WrongCat::makeSound(void) const
 {
-	std::cout << "Woooff" << std::endl;
+	std::cout << "I'm a unknow wrong animal" << std::endl;
 }
