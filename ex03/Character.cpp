@@ -6,7 +6,7 @@
 /*   By: tmatis <tmatis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 22:11:49 by tmatis            #+#    #+#             */
-/*   Updated: 2021/08/20 00:17:40 by tmatis           ###   ########.fr       */
+/*   Updated: 2021/08/20 00:43:02 by tmatis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@
 
 Character::Character(void) : _name("Default")
 {
-
+	for (int i = 0; i < 4; i++)
+		this->_inventory[i] = NULL;
 }
 
 Character::Character(std::string const &name) : _name(name)
@@ -58,7 +59,10 @@ Character	&Character::operator=(const Character &right)
 	{
 		if (this->_inventory[i] != NULL)
 			delete this->_inventory[i];
-		this->_inventory[i] = right._inventory[i];
+		if (right._inventory[i] != NULL)
+			this->_inventory[i] = right._inventory[i]->clone();
+		else
+			this->_inventory[i] = NULL;
 	}
 	return (*this);
 }

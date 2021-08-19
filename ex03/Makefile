@@ -6,7 +6,7 @@
 #    By: tmatis <tmatis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/14 10:00:31 by tmatis            #+#    #+#              #
-#    Updated: 2021/08/20 00:16:16 by tmatis           ###   ########.fr        #
+#    Updated: 2021/08/20 00:27:36 by tmatis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@
 
 NAME	= ex03
 CC 		= clang++
-CFLAGS	= -Wall -Werror -Wextra -std=c++98 -pedantic
+CFLAGS	= -Wall -Werror -Wextra -std=c++98 -pedantic -g
 AUTHOR	= tmatis
 DATE	= 14/06/2021
 
