@@ -38,7 +38,8 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource &right)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		delete this->_materia[i];
+		if (this->_materia[i])
+			delete this->_materia[i];
 		this->_materia[i] = right._materia[i];
 	}	
 	return (*this);
