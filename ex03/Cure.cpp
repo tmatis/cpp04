@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tmatis <tmatis@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/02 15:14:04 by tmatis            #+#    #+#             */
-/*   Updated: 2021/08/18 13:31:53 by tmatis           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "Animal.hpp"
+#include "Cure.hpp"
 
 /* ************************************************************************** */
 /*                                OUTTER FONCTIONS                            */
@@ -24,48 +12,46 @@
 /*                           CONSTRUCTOR - DESTRUCTOR                         */
 /* ************************************************************************** */
 
-Animal::Animal(void)
+Cure::Cure(void) : AMateria("cure")
 {
-	std::cout << "Animal::Animal(void)" << std::endl;
+
 }
 
-Animal::Animal(const Animal &src)
+Cure::Cure(const Cure &src) : AMateria(src)
 {
 	*this = src;
 }
 
-Animal::~Animal(void) {}
+Cure::~Cure(void)
+{
+
+}
 
 /* ************************************************************************** */
 /*                              OVERLOAD FONCTIONS                            */
 /* ************************************************************************** */
 
-Animal	&Animal::operator=(const Animal &right)
+Cure	&Cure::operator=(const Cure &right)
 {
-	this->_type = right.getType();
+	AMateria::operator=(right);
 	return (*this);
-}
-
-std::ostream	&operator<<(std::ostream &os, const Animal &i)
-{
-	os << "type: " << i.getType();
-	return (os);
 }
 
 /* ************************************************************************** */
 /*                                 ACCES FONCTIONS                            */
 /* ************************************************************************** */
 
-std::string	Animal::getType() const
+void Cure::use(ICharacter &target)
 {
-	return (this->_type);
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
 
-void	Animal::setType(const std::string &type)
+AMateria	*Cure::clone(void) const
 {
-	this->_type = type;
+	return (new Cure(*this));
 }
 
 /* ************************************************************************** */
 /*                                MEMBER FONCTIONS                            */
 /* ************************************************************************** */
+

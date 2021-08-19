@@ -6,7 +6,7 @@
 #    By: tmatis <tmatis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/14 10:00:31 by tmatis            #+#    #+#              #
-#    Updated: 2021/08/20 00:09:19 by tmatis           ###   ########.fr        #
+#    Updated: 2021/08/20 00:16:16 by tmatis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 ################################################################################
 
 
-NAME	= ex02
+NAME	= ex03
 CC 		= clang++
 CFLAGS	= -Wall -Werror -Wextra -std=c++98 -pedantic
 AUTHOR	= tmatis
@@ -29,7 +29,7 @@ SRCS_PATH		= ./
 
 INCLUDE_PATH	= ./
 
-SRCS		= Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+SRCS		= AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 MAIN		= main.cpp
 
 ################################################################################
